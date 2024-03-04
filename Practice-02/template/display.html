@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+ <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <h2 class="mb-4">Users and Preferences</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Username</th>
+              <th scope="col">Fruit Preference</th>
+              <th scope="col">Vegetable Preference</th>
+              <th scope="col">Film Preference</th>
+            </tr>
+          </thead>
+          <tbody>
+
+
+             {% for user_data in users_data %}
+            <tr>
+              <td>{{ user_data.name }}</td>
+              <td>{{ user_data.preferences.fruit }}</td>
+              <td>{{ user_data.preferences.vegetable }}</td>
+              <td>{{ user_data.preferences.movie }}</td>
+            </tr>
+            {% endfor %}
+
+
+
+             
+          </tbody>
+        </table>
+
+        <!-- {% for user_data in users_data %}
+            
+        <p>hello</p>
+
+      {% endfor %} -->
+
+      </div>
+    </div>
+  </div> 
+
+
+  <!-- Name is   {{ users_data }} -->
+
+  <!-- {% for user_data in users_data %}
+            
+  <p>{{ user_data.preferences }}</p>
+
+{% endfor %} -->
+
+
+
+  {% endblock content %}

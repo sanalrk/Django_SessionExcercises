@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Choose Your Preferences</h5>
+            <form action="" method="POST">
+              {% csrf_token %}
+              <div class="form-group">
+                <label for="fruit">Select a Fruit:</label>
+                <select class="form-control" id="fruit" name="fruit" required>
+                  <option value="apple">Apple</option>
+                  <option value="banana">Banana</option>
+                  <option value="orange">Orange</option>
+                  <option value="strawberry">Strawberry</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="vegetable">Select a Vegetable:</label>
+                <select class="form-control" id="vegetable" name="vegetable" required>
+                  <option value="carrot">Carrot</option>
+                  <option value="broccoli">Broccoli</option>
+                  <option value="spinach">Spinach</option>
+                  <option value="tomato">Tomato</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="movie">Select a Movie:</label>
+                <select class="form-control" id="movie" name="movie" required>
+                  <option value="action">Action</option>
+                  <option value="comedy">Comedy</option>
+                  <option value="drama">Drama</option>
+                  <option value="horror">Horror</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+{% endblock content %}
